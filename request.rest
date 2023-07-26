@@ -1,0 +1,25 @@
+POST http://localhost:4000/user_login
+Content-Type: application/json
+
+{
+    "email": "abi123",
+    "password": "123"
+}
+
+###
+GET http://localhost:4000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksIm5hbWUiOiJhYmkiLCJlbWFpbCI6ImFiaTEyMyIsImlhdCI6MTY4ODQ4MjExNywiZXhwIjoxNjg4NDgyMTM3fQ.Bloz5dTrnBZaRQG42b2UqYJdKxIHkzrqkUBIjZqTLbs
+
+###
+GET http://localhost:4000/token
+###
+DELETE  http://localhost:4000/logout
+###
+PUT   http://localhost:4000/user_edit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODg0NzczODUsImV4cCI6MTY4ODU2Mzc4NX0.wBY8EPOgijPXCsM6M4zprGl6Vc_Mbuoi3f6KA8PoE60
+Content-Type: application/json
+
+{
+    "name": "abi",
+    "email": "abi123"
+}
