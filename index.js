@@ -9,7 +9,9 @@ const port = 4000;
 const userRouter = require("./src/router/user.router");
 const foodRouter = require("./src/router/food.router");
 const app = express();
-app.use(cors({ credentials: true }));
+app.use(
+  cors({ credentials: true, origin: "https://mama-recipe-coral.vercel.app" })
+);
 
 app.use(bodyParser.json());
 app.use(cookieParser());
