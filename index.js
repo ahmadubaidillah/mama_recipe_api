@@ -5,7 +5,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 // const fileupload = require("express-fileupload");
 // router
-const port = process.env.db_port || 4000;
+const port = 4000;
 const userRouter = require("./src/router/user.router");
 const foodRouter = require("./src/router/food.router");
 const app = express();
