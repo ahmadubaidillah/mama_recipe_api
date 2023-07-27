@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 // router
 const userRouter = require("./src/router/user.router");
 const foodRouter = require("./src/router/food.router");
-
+const port = process.env.db_port || 4000;
 const app = express();
 app.use(cors({ credentials: true }));
 
@@ -26,6 +26,6 @@ app.use(userRouter);
 app.use(foodRouter);
 // app.use(express.static("public"));
 
-app.listen(4000, () => {
-  console.log("SERVER LISTEN ON PORT 4000");
+app.listen(port, () => {
+  console.log(`SERVER LISTEN ON PORT ${port}`);
 });
