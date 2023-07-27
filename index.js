@@ -5,9 +5,9 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 // const fileupload = require("express-fileupload");
 // router
+const port = process.env.db_port || 4000;
 const userRouter = require("./src/router/user.router");
 const foodRouter = require("./src/router/food.router");
-const port = process.env.db_port || 4000;
 const app = express();
 app.use(cors({ credentials: true }));
 
@@ -29,3 +29,9 @@ app.use(foodRouter);
 app.listen(port, () => {
   console.log(`SERVER LISTEN ON PORT ${port}`);
 });
+
+app.get("/", (req, res) => {
+  res.send("Hello, this is API for MamaRecipe ");
+});
+// Export the Express API
+module.exports = app;
