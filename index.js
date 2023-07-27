@@ -9,7 +9,7 @@ const userRouter = require("./src/router/user.router");
 const foodRouter = require("./src/router/food.router");
 
 const app = express();
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true }));
 
 app.use(bodyParser.json());
 app.use(cookieParser());
