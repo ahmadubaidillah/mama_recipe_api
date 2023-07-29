@@ -58,10 +58,10 @@ const foodController = {
   },
 
   add: async (req, res) => {
-    const token = req.cookies.refreshToken;
-    const user = jwt.decode(token, { complete: true });
-    console.log(token);
-    console.log(user);
+    // const token = req.cookies.refreshToken;
+    // const user = jwt.decode(token, { complete: true });
+    // console.log(token);
+    // console.log(user);
     // const user_id = user.payload.userId;
     const images = await cloudinary.uploader.upload(req.file.path);
     const image = images.url;
